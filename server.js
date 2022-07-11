@@ -12,7 +12,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(urlencodedParser);
 const equationRoutes = require('./routes/equations');
 app.use('/', equationRoutes);
-app.use('/create', equationRoutes);
 const mongoose = require('mongoose');
 
 

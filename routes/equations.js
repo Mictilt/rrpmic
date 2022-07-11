@@ -14,12 +14,11 @@ router.post('/', jsonParser, function (req, res) {
 });
 
 router.get('/create', jsonParser, function (req, res) {
-    res.render('create');
+    res.render('Create');
 });
 
 router.post('/create', jsonParser, function (req, res) {
-        equationController.insert(req,res);
-
+    equationController.insert(req,res);
 });
 //Let's expose these routes
 module.exports = router;
