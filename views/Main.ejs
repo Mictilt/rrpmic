@@ -7,17 +7,36 @@
 </head>
 <body>
 <main>
-    Escreva a solução desta equação:
+    Escreva o valor de delta desta equação:
     <br>
-    <%if (equations._id ==1){%>
-    <%=equations.a_value%>x<sup>2</sup> + <%=equations.b_value%>x + <%=equations.c_value%>
-    <%}else {%>
-        L take
-    <%}%>
-    <form action="/" method="post">
-        <input name="result_1" type="number"> V <input name="result_2" type="number">
-        <button type="submit">Verificar</button>
+    <%=a%>x<sup>2</sup> + <%=b%>x + <%=c%>
+    <form>
+        <input name="result_1" type="number" id="result_1"> V <input name="result_2" type="number" id="result_2">
+        <button type="button" onclick="verifyResults(<%=a%>,<%=b%>,<%=c%>)">Verificar</button>
     </form>
 </main>
+<script>
+    function verifyResults(a, b, c) {
+        let result_1 = document.getElementById("result_1").value;
+        let result_2 = document.getElementById("result_2").value;
+        const delta1 = b*b - 4*a*c;
+        const delta2 = -(b*b - 4*a*c);
+        if (result_1 == "" || result_2== ""){
+            alert("Insira um valor");
+        }
+        else{
+            if (delta1 == result_1 && delta2 == result_2){
+                alert("Correto! A password é " + "<%=equation.password%>");
+                document.getElementById("result_1").value = "";
+                document.getElementById("result_2").value = "";
+            }
+            else{
+                alert("Errado!" );
+                document.getElementById("result_1").value = "";
+                document.getElementById("result_2").value = "";
+            }
+        }
+    }
+</script>
 </body>
 </html>

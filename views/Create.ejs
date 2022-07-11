@@ -7,30 +7,12 @@
 </head>
 <body>
 <main>
-    Introduza os valores necessários para algo do género:
-    <br>
-    ax<sup>2</sup> + bx + c
-    <br>
+    Introduza a password do router:
     <form action="/create" method="post">
-        coeficiente a:<input name="a_value" type="number"> coeficiente b:<input name="b_value" type="number"> coeficiente c:<input name="c_value" type="text">
-        <button type="submit" onclick="retResult1(a_value,b_value,c_value)">Criar</button>
+        <input name="password" type="text">
+        <button type="submit">Criar</button>
     </form>
 
 </main>
-<script>
-    retResult1 = (a,b,c) => {
-        const delta = b*b - 4*a*c;
-        const result =-b + Math.sqrt(delta);
-        const resultfinal = result/(2*a);
-        return resultfinal;
-    };
-
-    retResult2 = (a,b,c) => {
-        const delta = b*b - 4*a*c;
-        const result =-b - Math.sqrt(delta);
-        const resultfinal = result/(2*a);
-        return resultfinal;
-    };
-</script>
 </body>
 </html>
