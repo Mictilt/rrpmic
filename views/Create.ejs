@@ -6,13 +6,25 @@
     <%- include('./partials/Style')%>
 </head>
 <body>
-<main>
-    Introduza a password do router:
-    <form action="/create" method="post">
-        <input name="password" type="text">
-        <button type="submit">Criar</button>
-    </form>
-
-</main>
+<div>
+    <nav class="navbar navbar-dark bg-primary sticky-top" >
+        <div class="container-fluid">
+            <a class="navbar-brand" >
+                RRPMic
+            </a>
+        </div>
+    </nav>
+    <div class="box">
+        <div>
+            <div>
+                <b>Introduza a password do router:</b>
+            </div>
+            <form action="/create" method="post">
+                <input name="password" type="text">
+                <div><button type="submit" class="btn btn-primary btn-lg btn_verify" >Criar</button></div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
