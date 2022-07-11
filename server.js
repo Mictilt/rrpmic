@@ -8,6 +8,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('assets'));
 app.use(express.static(path.join(__dirname, 'public')))
 var urlencodedParser = bodyParser.urlencoded({extended:false});
+app.set('views', path.join(__dirname, 'views'));
 app.use(urlencodedParser);
 const equationRoutes = require('./routes/equations');
 app.use('/', equationRoutes);
