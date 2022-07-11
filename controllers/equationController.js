@@ -31,7 +31,7 @@ exports.getById = (req, res) => {
         const a =  Math.floor(Math.random()*99 - 50);
         const b =  Math.floor(Math.random()*99 - 50);
         const c =  Math.floor(Math.random()*99 - 50);
-        if(!err) res.status(201).render('main', {equation:doc, a, b, c});
+        if(!err) res.status(201).render('Main', {equation:doc, a, b, c});
         else res.status(500).send({message: err.message});
     });
 };
