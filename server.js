@@ -14,7 +14,6 @@ const equationRoutes = require('./routes/equations');
 app.use('/', equationRoutes);
 const mongoose = require('mongoose');
 
-
 server.listen(port, function () {
     console.log(`application is running at: http://localhost:${port}`);
 });

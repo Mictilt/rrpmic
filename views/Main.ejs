@@ -9,45 +9,30 @@
     <div>
         <nav class="navbar navbar-dark bg-primary sticky-top" >
             <div class="container-fluid">
-                <a class="navbar-brand" >
+                <a class="navbar-brand" href="/" >
                     RRPMic
                 </a>
             </div>
         </nav>
         <div class="box">
             <div>
-                <b>Escreva os valores de delta desta equação:</b>
+                <b>Escreva o valor de delta desta equação:</b>
             <br>
                 <b><%=a%>x<sup>2</sup> + <%=b%>x + <%=c%></b>
-                <form>
-                    <input name="result_1" type="number" id="result_1"> V <input name="result_2" type="number" id="result_2">
-                    <div><button type="button" class="btn btn-primary btn-lg btn_verify" onclick="verifyResults(<%=a%>,<%=b%>,<%=c%>)">Verificar</button></div>
+                <form action="/password" method="post">
+                    <input name="result_1" type="number" id="result_1">
+                    <input type="hidden" name="a" value="<%=a%>"><input type="hidden" name="b" value="<%=b%>"><input type="hidden" name="c" value="<%=c%>">
+                    <button type="submit" class="btn btn-primary btn-lg btn_verify">Verificar</button>
                 </form>
+                <br>
+                <% if(nada) {%>
+                    Insira valores válidos...
+                <%}%>
+                <% if(errado) {%>
+                    Errado! Tente outra vez
+                <%}%>
             </div>
         </div>
     </div>
-<script>
-    function verifyResults(a, b, c) {
-        let result_1 = document.getElementById("result_1").value;
-        let result_2 = document.getElementById("result_2").value;
-        const delta1 = b*b - 4*a*c;
-        const delta2 = -(b*b - 4*a*c);
-        if (result_1 == "" || result_2== ""){
-            alert("Insira valores válidos");
-        }
-        else{
-            if (delta1 == result_1 && delta2 == result_2){
-                alert("Correto! A password é " + "<%=equation.password%>");
-                document.getElementById("result_1").value = "";
-                document.getElementById("result_2").value = "";
-            }
-            else{
-                alert("Errado!" );
-                document.getElementById("result_1").value = "";
-                document.getElementById("result_2").value = "";
-            }
-        }
-    }
-</script>
 </body>
 </html>
