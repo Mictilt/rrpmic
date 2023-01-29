@@ -5,7 +5,7 @@ services:
     ports:
       - 3002:3002
     restart: always
-    working_dir: /app
+    working_dir: /
     command: npm start
     environment:
       NODE_ENV: production
