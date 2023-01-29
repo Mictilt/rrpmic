@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <title>RRPMIC</title>
     <%- include('./partials/Style')%>
+    <script defer src="app.js"></script>
 </head>
-<body>
+<body class="light">
     <div>
         <nav class="navbar navbar-dark bg-primary sticky-top" >
             <div class="container-fluid">
-                <a class="navbar-brand" href="/" >
+                <a class="navbar_ini logo" href="/" id="rrpmic">
                     RRPMic
                 </a>
+                <div class="container-fluid tema_nav">
+                    <li class="nav-item has-dropdown">
+                        <a class="navbar_ini" href="#">Tema</a>
+                        <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a id="light" href="#">light</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a id="dark" href="#">dark</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a id="solar" href="#">solarize</a>
+                        </li>
+                        </ul>
+                    </li>
+                </div>
             </div>
         </nav>
-        <div class="box">
+        <header class="box">
             <div>
                 <b>Escreva o valor de delta desta equação:</b>
             <br>
@@ -32,7 +49,7 @@
                     Errado! Tente outra vez
                 <%}%>
             </div>
-        </div>
+        </header>
     </div>
 </body>
 </html>

@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <title>RRPMIC-Create equation</title>
     <%- include('./partials/Style')%>
+    <script defer src="app.js"></script>
 </head>
-<body>
-<div>
-    <nav class="navbar navbar-dark bg-primary sticky-top" >
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/" >
-                RRPMic
-            </a>
-        </div>
-    </nav>
-    <div class="box">
+<body class="light">
+    <div>
+        <nav class="navbar navbar-dark bg-primary sticky-top" >
+            <div class="container-fluid">
+                <a class="navbar_ini" href="/" id="rrpmic">
+                    RRPMic
+                </a>
+                <div class="container-fluid tema_nav">
+                    <li class="nav-item has-dropdown">
+                        <a class="navbar_ini" href="#">Tema</a>
+                        <ul class="dropdown">
+                        <li class="dropdown-item">
+                            <a id="light" href="#">light</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a id="dark" href="#">dark</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a id="solar" href="#">solarize</a>
+                        </li>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+        </nav>
+    <header class="box">
         <div>
             <div>
                 <b>Introduza a password do router:</b>
@@ -24,7 +41,7 @@
                 <div><button type="submit" class="btn btn-primary btn-lg btn_verify" >Criar</button></div>
             </form>
         </div>
+    </header>
     </div>
-</div>
 </body>
 </html>
