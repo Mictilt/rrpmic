@@ -4,5 +4,7 @@ services:
     build:
       context: https://github.com/Mictilt/rrpmic.git
       dockerfile: Dockerfile
+    restart: always
+    container_name: rrpmic
     ports:
-      - "3002:3002"
+      - 3002:3002
