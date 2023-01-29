@@ -3,7 +3,7 @@ services:
   rrpmic:
     image: node:14
     ports:
-      - "3002:3002"
+      - 3002:3002
     restart: always
     working_dir: /app
     command: npm start
