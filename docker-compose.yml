@@ -10,4 +10,4 @@ services:
     environment:
       NODE_ENV: production
     volumes:
-      - /srv/dev-disk-by-uuid-7f2be8e1-1397-41e3-b4a6-eea73d9c03e4/appdata/rrpmic:/app
+      - /srv/dev-disk-by-uuid-7f2be8e1-1397-41e3-b4a6-eea73d9c03e4/appdata/Config/Code-Server/rrpmic:/app
