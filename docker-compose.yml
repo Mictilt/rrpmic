@@ -1,10 +1,13 @@
-version: "3"
+version: '3.7'
 services:
   rrpmic:
-    build:
-      context: https://github.com/Mictilt/rrpmic.git
-      dockerfile: Dockerfile
-    restart: always
-    container_name: rrpmic
+    image: node:14
     ports:
-      - 3002:3002
+      - "3002:3002"
+    restart: always
+    working_dir: /app
+    command: npm start
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./rrpmic:/app
