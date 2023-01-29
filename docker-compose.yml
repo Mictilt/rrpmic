@@ -1,0 +1,8 @@
+version: "3"
+services:
+  rrpmic:
+    build:
+      context: https://github.com/Mictilt/rrpmic.git
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
